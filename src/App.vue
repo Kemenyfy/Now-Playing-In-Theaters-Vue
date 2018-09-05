@@ -1,24 +1,35 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <MovieList  :movieData="movieData"/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MovieList from "./components/MovieList.vue";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    HelloWorld
+    MovieList
+  },
+  data:function(){
+    return {
+      movieData:[]
+    }
+  },
+  mounted: function() {
+    const Url = "https://api.themoviedb.org/3/search/movie?api_key=9fe2614f2b9d0f56b7e758ac2b8ef828&query=meg&language=en-US&page=1&include_adult=false"
+    fetch(Url)
+      .then(resp => resp.json())
+      .then(data => {
+        console.log(data)
+        this.movieData = data.results
+      });
   }
-}
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
