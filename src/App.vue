@@ -45,7 +45,7 @@ export default {
           });
       } else {
         const Url =
-          "https://api.themoviedb.org/3/search/movie?api_key=9fe2614f2b9d0f56b7e758ac2b8ef828&query=meg&language=en-US&page=1&include_adult=false";
+          "https://api.themoviedb.org/3/movie/popular?api_key=9fe2614f2b9d0f56b7e758ac2b8ef828&query=meg&language=en-US&page=1&include_adult=false";
         fetch(Url)
           .then(resp => resp.json())
           .then(data => {
@@ -59,7 +59,7 @@ export default {
 
 <style>
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Abhaya Libre', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
