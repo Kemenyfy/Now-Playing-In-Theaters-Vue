@@ -28,7 +28,6 @@ export default {
   },
   methods: {
     Search: function(addToUrl) {
-      console.log("Caught Emit", addToUrl);
       this.addToUrl = addToUrl
       this.updateComponent();
     },
@@ -40,7 +39,6 @@ export default {
         fetch(searchURL)
           .then(resp => resp.json())
           .then(data => {
-            console.log(data.results);
             this.movieData = data.results;
           });
       } else {

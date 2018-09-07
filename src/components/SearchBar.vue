@@ -16,7 +16,6 @@ export default {
       },
     methods: {
       enterSearch: function() {
-        console.log('Search Bar is Working')
         this.searchBar = this.searchBarInput
         this.$emit('addToSearchURL', this.searchBar)
       }

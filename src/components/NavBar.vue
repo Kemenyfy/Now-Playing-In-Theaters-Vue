@@ -36,7 +36,6 @@ export default {
   },
   methods:{
     searchEvent:function(searchTerm){
-      console.log("Searched For", searchTerm)
       this.searchTerm = this.searchBar
       this.$emit('searchBar', searchTerm)
     }
