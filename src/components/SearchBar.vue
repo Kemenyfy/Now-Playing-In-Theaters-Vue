@@ -1,7 +1,7 @@
 <template>
   <form v-on:submit.prevent="enterSearch">
     <input class="form-control mr-sm-2" placeholder="Search" v-model="searchBarInput" >
-    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    <button class="btn btn-outline-success my-2 my-sm-0" >Search</button>
   </form>
 </template>
 

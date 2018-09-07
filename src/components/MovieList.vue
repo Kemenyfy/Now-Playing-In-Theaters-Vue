@@ -1,6 +1,5 @@
 <template>
 <div>
-  <header class="text-center">Trending</header>
   <Movie :movieData="movieData"/>
 </div>
 </template>
@@ -23,8 +22,5 @@ export default {
 </script>
 
 <style scoped>
-.text-center {
-  font-weight: bold;
-  margin: 1em 1em -1em 1em;
-}
+
 </style>

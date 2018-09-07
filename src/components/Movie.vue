@@ -4,7 +4,7 @@
     <img class="card-img-top" :src="getImageUrl(movie.poster_path)" alt="Card image cap">
     <div class="card-body">
       <!-- <h4 class="card-title">{{ movie.title }}</h4> -->
-      <p class="card-text">Released Date: {{ movie.release_date }}</p>
+      <!-- <p class="card-text">Released Date: {{ movie.release_date }}</p> -->
       <a href="#!" class="btn btn-primary">Movie Details</a>
     </div>
   </div>
@@ -32,6 +32,7 @@ export default {
     margin: 1em;
     border-radius: 1em;
     max-width: 18em;
+    align-items: center;
 }
 
 .row {
